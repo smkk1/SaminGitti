@@ -1,0 +1,807 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+  <!-- Theme Made By www.w3schools.com -->
+  <title>AURORA</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+     <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+
+  <style>
+  body {
+    font: 400 15px Lato, sans-serif;
+    line-height: 1.8;
+    color: #818181;
+  }
+  
+    .nappi {
+  display: inline-block;
+  border-radius: 4px;
+background-image: url("N2.jpg");
+  border: none;
+  color: #FFFFFF;
+  text-align: center;
+  font-size: 28px;
+  padding: 20px;
+  width: 200px;
+  transition: all 0.5s;
+  cursor: pointer;
+  margin: 5px;
+}
+
+.nappi span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+.nappi span:after {
+  content: '\00bb';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+
+.nappi:hover {
+background-image: url("N1.jpg");
+box-shadow: 5px 0px 40px rgba(7, 116, 175, .5);
+}
+
+.nappi:hover span {
+  padding-right: 25px;
+}
+
+.nappi:hover span:after {
+  opacity: 1;
+  right: 0;
+}
+  
+  h2 {
+    font-size: 24px;
+    text-transform: uppercase;
+    color: #33477d;
+    font-weight: 600;
+    margin-bottom: 30px;
+  }
+  h4 {
+    font-size: 19px;
+    line-height: 1.375em;
+    color: #63d6cb;
+    font-weight: 400;
+    margin-bottom: 30px;
+  }  
+  .jumbotron {
+    background-image: url("N1.jpg");
+	background-repeat: no-repeat;
+	background-size: cover;
+    color: #fff;
+    padding: 50px 12px;
+	margin: 0px;
+    font-family: Montserrat, sans-serif;
+  }
+  .container-fluid {
+    padding: 60px 50px;
+	background: #292a58;
+  }
+  .container-aurora{
+  padding: 60px 50px;
+	background: #292a58;
+	background-image: url("kuva3.jpg");
+  background-repeat: no-repeat;
+  }
+  .bg-grey {
+    background-color: #f6f6f6;
+  }
+  .logo-small {
+    color: #47cfc9;
+    font-size: 50px;
+  }
+  .logo {
+    color: #47cfc9;
+    font-size: 200px;
+  }
+  .thumbnail {
+    padding: 0 0 15px 0;
+    border: none;
+    border-radius: 0;
+  }
+  .thumbnail img {
+    width: 100%;
+    height: 100%;
+    margin-bottom: 10px;
+  }
+  .carousel-control.right, .carousel-control.left {
+    background-image: none;
+    color: #47cfc9;
+  }
+  .carousel-indicators li {
+    border-color: #47cfc9;
+  }
+  .carousel-indicators li.active {
+    background-color: #47cfc9;
+  }
+  .item h4 {
+    font-size: 19px;
+    line-height: 1.375em;
+    font-weight: 400;
+    font-style: italic;
+    margin: 70px 0;
+  }
+  .item span {
+    font-style: normal;
+  }
+  .panel {
+    border: 1px solid #178fd1; 
+    border-radius:0 !important;
+    transition: box-shadow 0.5s;
+  }
+  .panel:hover {
+    box-shadow: 5px 0px 40px rgba(7, 116, 175, .5);
+  }
+  .panel-footer .btn:hover {
+    border: 1px solid #47cfc9;
+    background-color: #fff !important;
+    color: #47cfc9;
+  }
+  .panel-heading {
+    color: #fff !important;
+    background-image: url("Nav1.jpg");
+	background-size:100% 100%;
+    padding: 25px;
+    border-bottom: 1px solid transparent;
+    border-top-left-radius: 0px;
+    border-top-right-radius: 0px;
+    border-bottom-left-radius: 0px;
+    border-bottom-right-radius: 0px;
+  }
+  .panel-footer {
+    background-color: white !important;
+  }
+  .panel-footer h3 {
+    font-size: 32px;
+  }
+  .panel-footer h4 {
+    color: #aaa;
+    font-size: 14px;
+  }
+  .panel-footer .btn {
+    margin: 15px 0;
+    background-color: 47cfc9;
+    color: #fff;
+  }
+  .navbar {
+    margin-bottom: 0;
+    background-color: #292a58;
+    z-index: 9999;
+    border: 0;
+    font-size: 12px !important;
+    line-height: 1.42857143 !important;
+    letter-spacing: 4px;
+    border-radius: 0;
+    font-family: Montserrat, sans-serif;		
+  }
+  .navbar li a, .navbar .navbar-brand {
+    color: #fff !important;
+  }
+  .navbar-nav li a:hover, .navbar-nav li.active a {
+    color: #47cfc9 !important;
+    background-color: #fff !important;
+  }
+  .navbar-default .navbar-toggle {
+    border-color: transparent;
+    color: #fff !important;
+  }
+  footer .glyphicon {
+    font-size: 20px;
+    margin-bottom: 20px;
+    color: #47cfc9;
+  }
+  
+
+  .slideanim {visibility:hidden;}
+  .slide {
+    animation-name: slide;
+    -webkit-animation-name: slide;
+    animation-duration: 1s;
+    -webkit-animation-duration: 1s;
+    visibility: visible;
+  }
+
+  @keyframes slide {
+    0% {
+      opacity: 0;
+      transform: translateY(70%);
+    } 
+    100% {
+      opacity: 1;
+      transform: translateY(0%);
+    }
+  }
+  @-webkit-keyframes slide {
+    0% {
+      opacity: 0;
+      -webkit-transform: translateY(70%);
+    } 
+    100% {
+      opacity: 1;
+      -webkit-transform: translateY(0%);
+    }
+  }
+  @media screen and (max-width: 768px) {
+    .col-sm-4 {
+      text-align: center;
+      margin: 25px 0;
+    }
+    .btn-lg {
+      width: 100%;
+      margin-bottom: 35px;
+    }
+  }
+  @media screen and (max-width: 480px) {
+    .logo {
+      font-size: 150px;
+    }
+  }
+  </style>
+</head>
+
+<body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="60">
+
+<nav class="navbar navbar-default navbar-fixed-top">
+
+  <div class="container">
+
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>                        
+      </button>
+	 <a class="navbar-brand" href="#myPage">SolarStormFoxes</a>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="#about">REVONTULET JA ME</a></li>
+        <li><a href="#services">MITTARIT</a></li>
+        <li><a href="#portfolio">KUVIA JA KOKEMUKSIA</a></li>
+        <li><a href="#pricing">HINNASTO</a></li>
+        <li><a href="#contact">YHTEYSTIEDOT</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<div class="jumbotron text-center">
+    <a class="weatherwidget-io" href="https://forecast7.com/en/61d9225d75/finland/" data-label_1="Rovaniemi" data-label_2="WEATHER" data-theme="original" >Rovaniemi WEATHER</a>
+<script>
+!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src='https://weatherwidget.io/js/widget.min.js';fjs.parentNode.insertBefore(js,fjs);}}(document,'script','weatherwidget-io-js');
+</script>
+  <h1><img src="logo1.png " height="300" width="300"></h1> 
+
+  <p>Revontuliretkillä mukanasi</p> 
+  <form>
+    <div class="input-group">
+      <!--<input type="email" class="form-control" size="50" placeholder="Email Address" required>
+      <div class="input-group-btn">
+        <!--<button type="button" class="btn btn-danger">Subscribe</button>-->
+      </div>
+    </div>
+  </form>
+</div>
+
+<!-- Container (About Section) -->
+<div id="about" class="container-fluid">
+  <div class="row">
+    <div class="col-sm-8">
+      <h2 color="white">keitä olemme</h2><br>
+      <h4>Olemme 4 hengen yritys, joka tarjoaa käyttäjillensä revontulipaikantimen. </h4><br>
+      <p>Revontulet ovat osa lappia, ja kukapa ei haluaisi nähdä niitä lapin matkallansa. Mutta mistä aloittaa? Sivuiltamme saat tietoa, milloin
+		revontulia on näkyvillä. </p>
+	  <button class="btn btn-default btn-lg"<li><a href="#contact">Ota yhteyttä</a></li></button>
+    </div>
+    <div class="col-sm-4">
+     <img src="kettu.png" alt="kettu" width="600" height="400">
+    </div>
+  </div>
+</div>
+
+
+
+
+<div class="container-fluid bg-grey">
+  <div class="row">
+    <div class="col-sm-4">
+    <img src="https://services.swpc.noaa.gov/images/animations/ovation-north/latest.jpg" width="75%"> 
+    </div>
+    <div class="col-sm-8">
+      <h2>Revontulet ja mittaaminen</h2><br>
+      <h4><strong>REVONTULET:</strong> Auringon magneettikentässä on häiriöitä, joita me maan asukit kutsumme aurinkopilkuiksi. Häiriöistä vapautuu hiukkassäteilyä (lisäksi sähkömagneettista säteilyä). (Korhonen.) Roihupurkaus tarkoittaa sitä, että muutamassa minuutissa auringon yläpuolella olevaan magneettikenttään varastoitunut energia vapautuu. 
+	  Roihusta vapautuu myös hiukkasia ja sähkömagneettista säteilyä. Roihuja voi havaita röntgen, UV ja gammataajuuksilla, mutta mahdollisesti myös valona. (Ilmatieteen laitos.)  </h4><br>
+	  <h4>Niin kuin maan päällä, myös avaruudessa tuulee. Avaruudesta peräisin oleva tuuli tulee auringosta. Maan magneettikentän myrkyt johtuvat siitä, että tuulet tuo mukanaan magneettisia pilviä. (Ilmatieteen laitos.) Avaruuteen sinkoaa päivittäin isoja kaasupilviä auringosta, ja näitä kutsutaan koronan massapurkauksiksi. Niissä oleva aine on peräisin auringon kaasukehästä. Suurimmat massapurkaukset antavat voimaa aurinkotuulen virtaukselle ja sen kuljettamalle magneettikentälle.
+	  Massapurkauksen pilvi näkyy auringon valon vuoksi, mutta se ei säteile. Massapurkauksiin liittyviin asioihin havaintoja tekee ainakin SOHO-satelliitti. (Ilmatieteen laitos.)  </h4><br>
+	  
+	  <h4>Revontulia syntyy, kun maan ilmakehään osuu aurinkotuulen varatut hiukkaset.
+	  Hiukkasten törmätessä happeen ja typpeen syntyy taivaalle valoja, jotka hohtavat väreissä.
+	  Valo johtuu siitä, kun ilmakehän atomit törmäyksen yhteydessä virittyvät ja päästävät kyseisen energian valona ulos (Sähkömagnetismi Osa 6).
+	  Revontulilla voi olla erilaisia muotoja ja värejä. Revontulen värit on kiinni siitä, vastaako hiukkaset typpimolekyyleihin vai happiatomeihin. 
+	  Happea ja typpeä on eri kerroksissa maan ilmakehässä, joten tämän vuoksi eri värit näkyvät eri korkeuksissa. Jos hiukkaset osuvat happiatomiin, 
+	  tuloksena on punaista ja vihreää. Jos taas hiukkaset kohtaavat typpimolekyylin kanssa, tuloksen on sinistä ja violettia. Varautuneet hiukkaset
+	  tulevat napa-alueille maan magneettikentän johdosta spiraaliratojen kautta (Korhonen), jolloin magneettiset ja sähköiset voimat aiheuttavat tanssivia ja 
+	  väriltään vaihtelevia revontulia. (Ilmatieteen laitos.) Maan magneettikenttä syntyy maapallon sisällä olevista sähkövirroista. Se on muodoltaan kuin sauvamagneetin
+	  dipolikenttä. Pidemmällä avaruudessa vaikutus aurinkotuulen kanssa tekee siitä pitkäpyrstöisen magneettikehän. (Ilmatieteen laitos.) Magnetosfääri (magneettikehä) ympäröi maata. Magneettikehässä on suuria sähkövirtoja ja siellä syntyy revontulia aiheuttavat hiukkasryöpyt. Itse revontulet näkyvät ilmakehässä. (Ilmatieteen laitos.) Magneettikehän sisällä oleva plasma liikkuu aurinkotuulten vaikutuksesta. Massapurkaukset voivat aiheuttaa kehään suurempia häiriöjaksoja (magneettinen myrsky). Mukana oleva kuva näyttää, miten plasma liikkuu magneettikehässä. (Ilmatieteen laitos.) Revontulia voidaan puhutella useammalla termillä,
+	  aurora borealis ja aurora australis. Aurora borealis kuvaa pohjoisen pallonpuoliskon revontulia ja aurora australis eteläisen pallonpuoliskon revontulia. (Expedia.)   <h4> <br>
+	  
+	  <img src="fysiikka.png" alt="fys" width="600" height="400">
+	  
+	  <h4>Lähteet:  </h4> 
+<h4>Expedia. Revontulien jäljillä. Viitattu 3.4.2019 http://www.expedia.fi/vc/c/revontulien-jaljilla/. </h4>
+
+<h4>Ilmatieteen laitos. Aurinkotuuli. Viitattu 3.4.2019 https://ilmatieteenlaitos.fi/aurinkotuuli. </h4>
+
+<h4>Ilmatieteen laitos. Avaruusmyrskyt – magneettikehän dynamiikkaa. Viitattu 10.4.2019 https://ilmatieteenlaitos.fi/avaruusmyrskyt. </h4>
+
+<h4>Ilmatieteen laitos. Maan magneettikehä. Viitattu 10.4.2019 https://ilmatieteenlaitos.fi/magneettikeha. </h4>
+
+<h4>Ilmatieteen laitos. Maan magneettikenttä. Viitattu 10.4.2019 https://ilmatieteenlaitos.fi/maan-magneettikentta. </h4>
+
+<h4>Ilmatieteen laitos. Roihut ja massapurkaukset. Viitattu 10.4.2019 https://ilmatieteenlaitos.fi/roihut-ja-massapurkaukset. </h4>
+
+<h4>Korhonen, M. Sähkömagnetismi Osa 6. Viitattu 3.4.2019. </h4>
+
+<h4>Kuva: </h4>
+
+<h4>Ilmatieteen laitos. Avaruusmyrskyt – magneettikehän dynamiikkaa. Viitattu 16.4.2019 https://ilmatieteenlaitos.fi/avaruusmyrskyt. </h4>
+
+<br>
+	  
+      <p><strong>MITEN MITATAAN:</strong> Magneettikentän X-, Y- ja Z-komponentit mitataan magnetometrillä. 
+	  Saaduilla arvoilla voidaan laskea magneettikentän kokonaisarvo kaavalla B=√(Bx^2+By^2+Bz^2 ), 
+	  jonka jälkeen lasketaan kulmakerroin kaavalla k=Δy/Δx, jossa Delta-y merkitsee magneettikentän muutosta ja Delta-x ajan muutosta. (UNIVERSITY OF OULU 2015.) Kun magneettikentän muutos on
+		0,5 nT/s, tällöin olisi mahdollista, että revontulia olisi näkyvissä säästä riippuen. Tämä tarkoittaa sitä, että 10s ajalta kulmakertoimen tulee olla 0,5 tai yli, että revontulia 
+		voisi näkyä.  (Ilmatieteen laitos.)
+	<br>
+		Mittaamme Raspberry Pi:llä, Sense HAT:in magnetometrillä magneettikentän X-, Y- ja Z-komponentit 10 sekunnin välein. </p>
+		<br>
+		Lähteet: 
+		<br>
+		UNIVERSITY OF OULU 2015. Reaaliaikaiset tiedot. Viitattu 14.4.2019 http://www.sgo.fi/Data/RealTime/realTime.php.
+		Ilmatieteenlaitos.Magneettinen aktiivisuus kuluneen vuorokauden aikana. Viitattu 15.4.2019 https://ilmatieteenlaitos.fi/revontulet-ja-avaruussaa.
+    </div>
+  </div>
+  
+</div>
+
+<!-- Container (Services Section) -->
+<div id="services" class="container-fluid text-center">
+  <h2>Täältä näet revontulien tilanteen!</h2>
+ <p style="color:Tomato;"> Yksityiskohtaisemman datan näet  <a style="color:cyan;" href="alldata">TÄÄLTÄ</a></p>
+  <p style="color:Tomato;"> Voit muuttaa manuaalisesti kulmakerrointa  <a style="color:cyan;" href="muutakk">TÄÄLTÄ</a></p>
+  <br>
+   <div id="chart_div" style="width: 400px; height: 200px; align:center;"></div>
+  <div class="row slideanim">
+    <div class="col-sm-4">
+	
+    </div>
+    <div class="col-sm-4">
+	<h1> Viimeisin revontuli tilanne Rovaniemellä:</h1>
+
+
+
+
+<div id="result"></div>
+<p id="tulos2"></p>
+<p id="tulos1"></p>
+
+
+<table border="2" id="result"> </table>
+    </div>
+    <div class="col-sm-4">
+	<h1> Näytä ilmatieteenlaitoksen dataan perustuva tieto!</h1>
+	<p>Lähde: http://space.fmi.fi/image/realtime/FIN/<p>
+     <button type="button" class="nappi" onclick="haeData()">Näytä</button>
+<p id="demo"></p>
+  </div>
+  <br><br>
+<div class="row slideanim">
+    <div class="col-sm-4">
+     <br>
+	  <br>
+	   <br>
+    </div>
+    <div class="col-sm-4">
+	 <br>
+	  <br>
+    </div>
+    <div class="col-sm-4">
+     
+  </div>
+
+</div>
+
+<!-- Container (Portfolio Section) -->
+<div id="portfolio" class="container-fluid text-center bg-grey">
+  <h2>KUVIA JA KOKEMUKSIA</h2><br>
+  <h4>Tältä revontulet näyttävät, tule lappiin ja koe ne itse!</h4>
+  <div class="row text-center slideanim">
+    <div class="col-sm-4">
+      <div class="thumbnail">
+        <img src="Kuva1.jpg" alt="x" width="400" height="300">
+        <p><strong>Revontulien tanssia taivaalla</strong></p>
+        <p></p>
+      </div>
+    </div>
+    <div class="col-sm-4">
+      <div class="thumbnail">
+        <img src="Kuva2.jpg" alt="d" width="400" height="300">
+        <p><strong>Upeat vihreät revontulet heijastuvat vesistön pintaan</strong></p>
+        <p></p>
+      </div>
+    </div>
+    <div class="col-sm-4">
+      <div class="thumbnail">
+        <img src="Kuva3.jpg" alt="t" width="400" height="300">
+        <p><strong>Revontulet metsämaiseman taustalla</strong></p>
+        <p></p>
+      </div>
+    </div>
+  </div><br>
+  <h4> Ennen muinoin revontulista eli erilaisia uskomuksia. 
+  Uskottiin esimerkiksi, että tuntureilla juoksenteli kettu, joka heitteli kipinöitä yläilmoille huiskimalla hännällään.
+  Revontulille viheltely toi huonoa onnea ja se oli epäkunnioittava ele. Uskottiin, että revontulet ovat jumalia tai kuolleiden sieluja. 
+  Viheltelyä vähemmän kannatti vilkuttaa revontulille, sillä se saattoi aiheuttaa revontulien hyökkäyksen maahan ja vilkuttajalle kylmän kyydin.
+  Toisaalta revontulten uskottiin tuovan hyvää onnea, ja revontulten alla alkunsa saanut lapsi oli normaalia onnekkaampi. (Expedia.) <br>
+<br>
+Lähde: 
+
+Expedia. Revontulien jäljillä. Viitattu 3.4.2019 http://www.expedia.fi/vc/c/revontulien-jaljilla/.   </h4><br>
+	  
+  <h2>Mitä käyttäjämme ovat mieltä meistä?</h2>
+  <div id="myCarousel" class="carousel slide text-center" data-ride="carousel">
+    <!-- Indicators -->
+    <ol class="carousel-indicators">
+      <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+      <li data-target="#myCarousel" data-slide-to="1"></li>
+      <li data-target="#myCarousel" data-slide-to="2"></li>
+    </ol>
+
+    <!-- Wrapper for slides -->
+    <div class="carousel-inner" role="listbox">
+      <div class="item active">
+        <h4>"Mahtava sovellus, teki lapinlomasta elämyksellisemmän!"<br><span>Matkailija, 40v</span></h4>
+      </div>
+      <div class="item">
+        <h4>"Pro-paketin avulla paikallistin revontulet hyvin, ja sain upeita kuvia"<br><span>Valokuvaus harrastaja, 28v</span></h4>
+      </div>
+      <div class="item">
+        <h4>"This page is fantastic, I fell in love with aurora borealis!"<br><span>Tourist, 48v</span></h4>
+      </div>
+    </div>
+<script>
+
+	  </script>
+	
+    <!-- Left and right controls -->
+    <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+      <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+      <span class="sr-only">Taaksepäin</span>
+    </a>
+    <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+      <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+      <span class="sr-only">Seuraava</span>
+    </a>
+  </div>
+</div>
+
+<!-- Container (Pricing Section) -->
+<div id="pricing" class="container-fluid">
+  <div class="text-center">
+    <h2>HINNASTO</h2>
+    <h4>Näillä paketeilla saat pikkurahalla lisäboostia revontulikokemukseesi!</h4>
+	<p>Ilmainen versio on tarjolla kaikille käyttäjille.</p>
+  </div>
+  <div class="row slideanim">
+    <div class="col-sm-4 col-xs-12">
+      <div class="panel panel-default text-center">
+        <div class="panel-heading polaroid">
+          <h1>Basic</h1>
+        </div>
+        <div class="panel-body">
+          <p><strong>+</strong> Saat puhelimeesi ilmoituksen tunnin tarkkuudella</p>
+          <p><strong>+</strong> Saat käyttäjätunnuksen revontuli foorumille</p>
+          
+          
+        </div>
+        <div class="panel-footer">
+          <h3>10€</h3>
+          <h4>kk</h4>
+          <button class="btn btn-lg">Liity mukaan!</button>
+        </div>
+      </div>      
+    </div>     
+    <div class="col-sm-4 col-xs-12">
+      <div class="panel panel-default text-center">
+        <div class="panel-heading">
+          <h1>Pro</h1>
+        </div>
+        <div class="panel-body">
+          <p><strong>+</strong> Saat puhelimeesi ilmoituksen revontulista puolen tunnin tarkkuudella</p>
+          <p><strong>+</strong> Saat käyttäjätunnuksen revontuli foorumille</p>
+          
+         
+        </div>
+        <div class="panel-footer">
+          <h3>20€</h3>
+          <h4>kk</h4>
+          <button class="btn btn-lg">Liity mukaan!</button>
+        </div>
+      </div>      
+    </div>       
+    <div class="col-sm-4 col-xs-12">
+      <div class="panel panel-default text-center">
+        <div class="panel-heading">
+          <h1>Premium</h1>
+        </div>
+        <div class="panel-body">
+          <p><strong>+</strong> saat puhelimeesi ilmoituksen revontulista vartin tarkkuudella</p>
+          <p><strong>+</strong> Saat käyttäjätunnuksen revontuli foorumille</p>
+          
+          
+        </div>
+        <div class="panel-footer">
+          <h3>30€</h3>
+          <h4>kk</h4>
+          <button class="btn btn-lg">Liity mukaan!</button>
+        </div>
+      </div>      
+    </div>    
+  </div>
+</div>
+
+<!-- Container (Contact Section) -->
+<div id="contact" class="container-fluid bg-grey">
+  <h2 class="text-center">YHTEYSTIEDOT</h2>
+  <div class="row">
+    <div class="col-sm-5">
+      <p>Ota yhteyttä meihin, vastaamme mahdollisimman pian!</p>
+      <p><span class="glyphicon glyphicon-map-marker"></span> Rovaniemi, Suomi</p>
+      <p><span class="glyphicon glyphicon-phone"></span> +0736 3843 38347</p>
+      <p><span class="glyphicon glyphicon-envelope"></span> host@aurora.com</p>
+    </div>
+    <div class="col-sm-7 slideanim">
+      <div class="row">
+        <div class="col-sm-6 form-group">
+          <input class="form-control" id="name" name="name" placeholder="Name" type="text" required>
+        </div>
+        <div class="col-sm-6 form-group">
+          <input class="form-control" id="email" name="email" placeholder="Email" type="email" required>
+        </div>
+      </div>
+      <textarea class="form-control" id="comments" name="comments" placeholder="Comment" rows="5"></textarea><br>
+      <div class="row">
+        <div class="col-sm-12 form-group">
+          <button class="btn btn-default pull-right" type="submit">Lähetä</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Image of location/map -->
+<img src="logo1.png"  style="padding:10px; width:15%" >
+
+<footer class="container-fluid text-center">
+  <a href="#myPage" title="To Top">
+    <span class="glyphicon glyphicon-chevron-up"></span>
+  </a>
+  <p>Ilmatieteenlaitoksen reaaliaika tilanne http://space.fmi.fi/image/realtime/FIN/SOD/SODdata_24.txt </p>
+  <p> Päivittyvä revontulitilanne kuva https://services.swpc.noaa.gov/images/animations/ovation-north/latest.jpg </p>
+  <p> Osa web-sivujen kuvista sivulta https://pixabay.com/fi/ </p>
+  <p>Bootstrap Theme Made By <a href="https://www.w3schools.com" title="Visit w3schools">www.w3schools.com</a></p>
+</footer>
+
+<script type="text/javascript">
+    google.charts.load('current', {'packages':['gauge']});
+      google.charts.setOnLoadCallback(mongoFunktio);
+$(document).ready(function(){
+
+  // Add smooth scrolling to all links in navbar + footer link
+  $(".navbar a, footer a[href='#myPage']").on('click', function(event) {
+    // Make sure this.hash has a value before overriding default behavior
+    if (this.hash !== "") {
+      // Prevent default anchor click behavior
+      event.preventDefault();
+
+      // Store hash
+      var hash = this.hash;
+
+      // Using jQuery's animate() method to add smooth page scroll
+      // The optional number (900) specifies the number of milliseconds it takes to scroll to the specified area
+      $('html, body').animate({
+        scrollTop: $(hash).offset().top
+      }, 900, function(){
+   
+        // Add hash (#) to URL when done scrolling (default click behavior)
+        window.location.hash = hash;
+      });
+    } // End if
+  });
+  
+  $(window).scroll(function() {
+    $(".slideanim").each(function(){
+      var pos = $(this).offset().top;
+
+      var winTop = $(window).scrollTop();
+        if (pos < winTop + 600) {
+          $(this).addClass("slide");
+        }
+    });
+  });
+})
+
+
+function haeData()
+{
+	var xhttp = new XMLHttpRequest();
+	xhttp.onreadystatechange = function() {
+	  if (this.readyState == 4 && this.status == 200) {
+		// Voitaisiin vain tulostaa json data tekstinä näytölle. 
+		//document.getElementById("demo").innerHTML = this.responseText;
+		//var data = JSON.parse(this.responseText);
+		
+		var viimeinen = JSON.parse(this.responseText);
+		var size = viimeinen.length;
+	
+		
+		// Tässä vain yksinkertainen esimerkki, jossa verrataan viimeistä x-arvoa ja tunti sitten ollutta 
+		// x arvoa. Tässä ei ehkä ole vielä älykkyyttä tarpeeksi, mutta teidän tehtävänä on miettiä
+		// miten dataa voidaan järkevästi analysoida
+
+		//verrataan viimeistä kokonais arvoa
+		//var erotus = data[size-1] - data[size - 1 - 360];
+		var oikea = viimeinen[size-1] - viimeinen[size-1-360];
+		var kk = viimeinen/3600;
+
+		if(kk > 0.5 || kk <-0.5)
+		{
+			document.getElementById("demo").innerHTML = "Revontulia näkynyt viimeisen tunnin aikana!";
+		}
+		else
+		{
+			document.getElementById("demo").innerHTML = "Revontulia ei viimeisen tunnin aikana";
+		}
+		
+		
+		//viimeinen 1 johdettu siitä, että 360:60:60*10=1
+		var oikea2 = viimeinen[size-1] - viimeinen[size-1-1];
+		var kk1= oikea2/10;
+
+		if(kk1 > 0.5 || kk1 <-0.5 ||kk==0.5)
+		{
+			document.getElementById("demo").innerHTML = '<span style="color:cyan;font-size:40px"> revontulia näkyvissä</span>';
+		}
+		else
+		{
+			document.getElementById("demo").innerHTML = '<span style="color:red;font-size:40px">Ei revontulia näkyvissä</span>';
+		}
+		
+	
+
+		/*if(oikea2 > 1050 || oikea2 <-1050)
+		{
+			document.getElementById("demo").innerHTML = "Revontulia näkynyt viimeisen 10s aikana!";
+		}
+		else
+		{
+			document.getElementById("demo").innerHTML = "Revontulia ei viimeisen 10s aikana!";
+		}
+		
+		var oikea2 = viimeinen[size-1] - viimeinen[size-1-1];
+
+		
+		if(oikea2 > 2000 || oikea2 <-2000)
+		{
+			document.getElementById("demo").innerHTML = "Revontulia suurella varmuudella näkynyt 10s aikana!";
+		}
+		else
+		{
+			document.getElementById("demo").innerHTML = "Revontulia ei viimeisen 10s aikana!";
+		}
+		*/
+		
+		// Tässä vain esimerkkinä käydään koko array läpi alkio alkiolta. En tiedä tarvitsetteko oikeasti
+		// tätä sovelluksessa. Tämä vain esimerkkinä miten arrayta voidaan käsitellä
+		//var i;
+		
+		//for (i=0; i<size; i++)
+		//{
+			//x = data[i].x;
+			//console.log("x = " + data[i].x);
+		//}
+		
+	  }
+	};
+	xhttp.open("GET", "readData", true);
+	xhttp.send();
+}
+
+function mongoFunktio()
+{
+
+var xhttp = new XMLHttpRequest();
+	xhttp.onreadystatechange=function()  {
+	
+	 if (this.readyState == 4 && this.status == 200) 
+	 {                                    
+	 //document.getElementById("result").innerHTML=this.responseText;
+    var result = JSON.parse(this.responseText);
+    
+     var eka=result[0].koko_kentta;
+	 var toka=result[1].koko_kentta;
+    console.log(result[0].koko_kentta);
+	console.log(result[1].koko_kentta);
+    var erotus= eka - toka;
+	var kk=erotus/10;
+	console.log(kk);
+
+
+	var mittari;
+	
+	
+	 console.log(kk);
+	 if(kk < 0.5 ||kk<-0.5||kk==0.5) {
+	
+	 document.getElementById("tulos1").innerHTML='<span style="color:red;font-size:40px">Ei revontulia näkyvissä</span>';
+	 document.getElementById('services').style.backgroundImage = 'url(EiRevontulia.png)';
+	 document.getElementById("services").style.backgroundRepeat = "no-repeat"; 
+	  mittari=0;
+	 
+	 }
+	 
+	else{
+
+	document.getElementById("tulos2").innerHTML='<span style="color:cyan;font-size:40px"> revontulia näkyvissä</span>';
+	mittari=100;
+	document.getElementById('services').style.backgroundImage = 'url(auroora.gif)';
+document.getElementById("services").style.backgroundRepeat = "no-repeat"; 
+;
+}
+console.log(kk);
+
+}
+   var data = google.visualization.arrayToDataTable([
+          ['Label', 'Value'],
+          ['Revontulet',mittari],
+        ]);
+
+        var options = {
+          width: 700, height: 400,
+          redFrom: 50, redTo: 100, 
+          yellowFrom:0, yellowTo: 50,
+          minorTicks: 2. 
+		 
+		 
+		 
+        };
+
+        var chart = new google.visualization.Gauge(document.getElementById('chart_div'));
+		
+        chart.draw(data, options);	
+}
+
+	xhttp.open ("GET","sense",true);
+	xhttp.send();
+}
+//https://weatherwidget.io/
+ </script>
+
+</body>
+</html>

@@ -1,0 +1,571 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+  <!-- Theme Made By www.w3schools.com -->
+  <title>AURORA</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+
+
+  <style>
+  body {
+    font: 400 15px Lato, sans-serif;
+    line-height: 1.8;
+    color: #818181;
+  }
+  h2 {
+    font-size: 24px;
+    text-transform: uppercase;
+    color: #33477d;
+    font-weight: 600;
+    margin-bottom: 30px;
+  }
+  h4 {
+    font-size: 19px;
+    line-height: 1.375em;
+    color: #63d6cb;
+    font-weight: 400;
+    margin-bottom: 30px;
+  }  
+  .jumbotron {
+    background-image: url("N1.jpg");
+	background-repeat: no-repeat;
+	background-size: cover;
+    color: #fff;
+    padding: 50px 12px;
+	margin: 0px;
+    font-family: Montserrat, sans-serif;
+  }
+  .container-fluid {
+    padding: 60px 50px;
+	background: #292a58;
+  }
+  .bg-grey {
+    background-color: #f6f6f6;
+  }
+  .logo-small {
+    color: #47cfc9;
+    font-size: 50px;
+  }
+  .logo {
+    color: #47cfc9;
+    font-size: 200px;
+  }
+  .thumbnail {
+    padding: 0 0 15px 0;
+    border: none;
+    border-radius: 0;
+  }
+  .thumbnail img {
+    width: 100%;
+    height: 100%;
+    margin-bottom: 10px;
+  }
+  .carousel-control.right, .carousel-control.left {
+    background-image: none;
+    color: #47cfc9;
+  }
+  .carousel-indicators li {
+    border-color: #47cfc9;
+  }
+  .carousel-indicators li.active {
+    background-color: #47cfc9;
+  }
+  .item h4 {
+    font-size: 19px;
+    line-height: 1.375em;
+    font-weight: 400;
+    font-style: italic;
+    margin: 70px 0;
+  }
+  .item span {
+    font-style: normal;
+  }
+  .panel {
+    border: 1px solid #178fd1; 
+    border-radius:0 !important;
+    transition: box-shadow 0.5s;
+  }
+  .panel:hover {
+    box-shadow: 5px 0px 40px rgba(7, 116, 175, .5);
+  }
+  .panel-footer .btn:hover {
+    border: 1px solid #47cfc9;
+    background-color: #fff !important;
+    color: #47cfc9;
+  }
+  .panel-heading {
+    color: #fff !important;
+    background-image: url("Nav1.jpg");
+	background-size:100% 100%;
+    padding: 25px;
+    border-bottom: 1px solid transparent;
+    border-top-left-radius: 0px;
+    border-top-right-radius: 0px;
+    border-bottom-left-radius: 0px;
+    border-bottom-right-radius: 0px;
+  }
+  .panel-footer {
+    background-color: white !important;
+  }
+  .panel-footer h3 {
+    font-size: 32px;
+  }
+  .panel-footer h4 {
+    color: #aaa;
+    font-size: 14px;
+  }
+  .panel-footer .btn {
+    margin: 15px 0;
+    background-color: 47cfc9;
+    color: #fff;
+  }
+  .navbar {
+    margin-bottom: 0;
+    background-color: #292a58;
+    z-index: 9999;
+    border: 0;
+    font-size: 12px !important;
+    line-height: 1.42857143 !important;
+    letter-spacing: 4px;
+    border-radius: 0;
+    font-family: Montserrat, sans-serif;		
+  }
+  .navbar li a, .navbar .navbar-brand {
+    color: #fff !important;
+  }
+  .navbar-nav li a:hover, .navbar-nav li.active a {
+    color: #47cfc9 !important;
+    background-color: #fff !important;
+  }
+  .navbar-default .navbar-toggle {
+    border-color: transparent;
+    color: #fff !important;
+  }
+  footer .glyphicon {
+    font-size: 20px;
+    margin-bottom: 20px;
+    color: #47cfc9;
+  }
+  
+
+  .slideanim {visibility:hidden;}
+  .slide {
+    animation-name: slide;
+    -webkit-animation-name: slide;
+    animation-duration: 1s;
+    -webkit-animation-duration: 1s;
+    visibility: visible;
+  }
+
+  @keyframes slide {
+    0% {
+      opacity: 0;
+      transform: translateY(70%);
+    } 
+    100% {
+      opacity: 1;
+      transform: translateY(0%);
+    }
+  }
+  @-webkit-keyframes slide {
+    0% {
+      opacity: 0;
+      -webkit-transform: translateY(70%);
+    } 
+    100% {
+      opacity: 1;
+      -webkit-transform: translateY(0%);
+    }
+  }
+
+  @media screen and (max-width: 768px) {
+    .col-sm-4 {
+      text-align: right;
+      margin: 25px 0;
+    }
+    .btn-lg {
+      width: 100%;
+      margin-bottom: 35px;
+    }
+  }
+  @media screen and (max-width: 480px) {
+    .logo {
+      font-size: 150px;
+    }
+  }
+
+  </style>
+</head>
+
+
+
+
+
+<div class="jumbotron text-center">
+  
+<script>
+!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src='https://weatherwidget.io/js/widget.min.js';fjs.parentNode.insertBefore(js,fjs);}}(document,'script','weatherwidget-io-js');
+</script>
+  <h1><img src="logo1.png " height="300" width="300"></h1> 
+
+  <p>Revontuliretkillä mukanasi</p> 
+  <form>
+    <div class="input-group">
+      <!--<input type="email" class="form-control" size="50" placeholder="Email Address" required>
+      <div class="input-group-btn">
+        <!--<button type="button" class="btn btn-danger">Subscribe</button>-->
+      </div>
+    </div>
+  </form>
+</div>
+
+<!-- Container (About Section) -->
+<div id="about" class="container-fluid">
+  <div class="row">
+    <div class="col-sm-8">
+<p>  Näytä viimeisin Rovaniemen magnetometri data </p> 
+
+
+<input type="button" onclick="mongoFunktio()"  value="Näytä"><br>
+
+<table border ="1"   align="left" style="border:2px double Tomato;" id ="mytab1">  </table>
+<table border ="1"  align="right" style="border:2px solid green;"  id ="mytab2">  </table> 
+    </div>
+    <div class="col-sm-4">
+	<p align ="left">Näytä viimeisin Sodankylän magnetometri data</p>
+	<input type="button" style="float: left;"  onclick="Sodankylä()"  value="Näytä" >
+    
+
+   
+	
+    </div>
+	   
+  </div>
+ 
+</div>
+ <div id="chartContainer" style="height: 370px; width: 100%;"></div>
+
+
+<p>Etusivulle <a href="/">Tästä</a></p>
+
+
+<script type="text/javascript">
+$(document).ready(function(){
+
+  // Add smooth scrolling to all links in navbar + footer link
+  $(".navbar a, footer a[href='#myPage']").on('click', function(event) {
+    // Make sure this.hash has a value before overriding default behavior
+    if (this.hash !== "") {
+      // Prevent default anchor click behavior
+      event.preventDefault();
+
+      // Store hash
+      var hash = this.hash;
+
+      // Using jQuery's animate() method to add smooth page scroll
+      // The optional number (900) specifies the number of milliseconds it takes to scroll to the specified area
+      $('html, body').animate({
+        scrollTop: $(hash).offset().top
+      }, 900, function(){
+   
+        // Add hash (#) to URL when done scrolling (default click behavior)
+        window.location.hash = hash;
+      });
+    } // End if
+  });
+  
+  $(window).scroll(function() {
+    $(".slideanim").each(function(){
+      var pos = $(this).offset().top;
+
+      var winTop = $(window).scrollTop();
+        if (pos < winTop + 600) {
+          $(this).addClass("slide");
+        }
+    });
+  });
+})
+
+
+function Sodankylä()
+{
+	var xhttp = new XMLHttpRequest();
+	xhttp.onreadystatechange = function() {
+	  if (this.readyState == 4 && this.status == 200) {
+		// Voitaisiin vain tulostaa json data tekstinä näytölle. 
+		//document.getElementById("data").innerHTML = this.responseText;
+		var data = JSON.parse(this.responseText);
+		var size = data.length ;
+
+		
+		
+		
+
+var today = new Date();
+var date = today.getFullYear()+'-'+(today.getMonth()+1)+'-'+today.getDate();
+var time = today.getHours() + ":" + today.getMinutes() + ":" + today.getSeconds();
+var dateTime = date+' '+time;
+		
+		var txt= " ";	
+		var x;
+		var i;
+   txt += "<table>"
+	for (i=0; i<12; i++) {
+      txt +="<tr><td>" +data[i].x + "</td><td>" +data[i].y + "</td><td>" +data[i].z + "</td><th>"+ dateTime+"</th></tr>";
+    }	
+    txt += "</table>" 	
+	document.getElementById("mytab2").innerHTML ="<tr><th>"+ "X-Arvo"+"</th><th>"+ "Y-Arvo"+"</th><th>"+ "Z-Arvo"+"</th><th>"+"Aika"+"</th></tr>"+txt
+
+		
+	  }
+	};
+	xhttp.open("GET", "SodData", true);
+	xhttp.send();
+}
+
+function mongoFunktio()
+{
+
+var xhttp = new XMLHttpRequest();
+	xhttp.onreadystatechange=function()  {
+	
+	 if (this.readyState == 4 && this.status == 200) 
+	 {                                    
+	 //document.getElementById("result").innerHTML=this.responseText;
+    var result = JSON.parse(this.responseText);
+    
+
+var txt= " ";	
+var x;
+
+   txt += "<table>"
+	for (x in result) {
+      txt +="<tr><td>" +result[x].x.toFixed(2) + "</td><td>" + result[x].y.toFixed(2) + "</td><td>" + result[x].z.toFixed(2) + "</td><td>" + result[x].koko_kentta.toFixed(2) + "</td><td>"+result[x].Aika+ "</td</tr>";
+    }	
+    txt += "</table>" 	
+	document.getElementById("mytab1").innerHTML ="<tr><th>"+ "X-Arvo"+"</th><th>"+ "Y-Arvo"+"</th><th>"+ "Z-Arvo"+"</th><th>"+ "Koko Kenttä"+"</th><th>"+"Aika"+"</th></tr>"+txt;
+	
+
+
+
+}	
+}
+
+	xhttp.open ("GET","kaikkidata",true);
+	xhttp.send();
+}
+//https://weatherwidget.io/
+ </script>
+<script>
+window.onload = function () {
+
+var xhttp = new XMLHttpRequest();
+	xhttp.onreadystatechange=function()  {
+	
+	 if (this.readyState == 4 && this.status == 200) 
+	 {                                    
+    var data= JSON.parse(this.responseText);
+	var size = data.length ;
+	
+
+var options = {
+	animationEnabled: true,  
+	title:{
+		text: "Magneettikentän kokonais arvo viimeisen 2min ajalta (Rovaniemi)"
+	},
+	axisX: {
+		valueFormatString: "###"
+	},
+	axisY: {
+		title: "Magneettikentän kokonais arvo",
+		prefix: "",
+		includeZero: true
+	},
+	data: [{
+		yValueFormatString: "#",
+		xValueFormatString: "####",
+		type: "spline",
+		dataPoints: [
+			{ x: 10+"s", y: data[0].koko_kentta },
+			{ x: 20, y: data[1].koko_kentta},
+			{ x: 30, y: data[2].koko_kentta},
+			{ x: 40, y: data[3].koko_kentta},
+			{ x: 50, y: data[4].koko_kentta },
+			{ x: 60, y: data[5].koko_kentta },
+			{ x: 70, y: data[6].koko_kentta },
+			{ x: 80, y: data[7].koko_kentta },
+			{ x: 90, y: data[8].koko_kentta},
+			{ x: 100, y: data[9].koko_kentta },
+			{ x: 110, y: data[10].koko_kentta },
+			{ x: 120, y: data[11].koko_kentta }
+		]
+	}]
+};
+$("#chartContainer").CanvasJSChart(options);
+
+}}
+xhttp.open ("GET","kaikkidata",true);
+xhttp.send();
+}
+</script>
+<script>
+window.onload = function () {
+
+var xhttp = new XMLHttpRequest();
+	xhttp.onreadystatechange=function()  {
+	
+	 if (this.readyState == 4 && this.status == 200) 
+	 {                                    
+    var data= JSON.parse(this.responseText);
+	var size = data.length ;
+
+var chart = new CanvasJS.Chart("chartContainer", {
+	title: {
+		text: "Magneettikentän XYZ+ kokonaisarvot viimeisen 2min ajalta (Rovaniemi)"
+	},
+	axisX: {
+		valueFormatString: "#s"
+	},
+	axisY2: {
+		title: "nanotesla",
+
+	},
+	toolTip: {
+		shared: true
+	},
+	legend: {
+		cursor: "pointer",
+		verticalAlign: "top",
+		horizontalAlign: "center",
+		dockInsidePlotArea: true,
+		itemclick: toogleDataSeries
+	},
+	data: [{
+		type:"line",
+		axisYType: "secondary",
+		name: "Magneettikentän kokonaisarvo",
+		showInLegend: true,
+		markerSize: 0,
+		yValueFormatString: "",
+		dataPoints: [		
+			{ x: 10, y: data[0].koko_kentta },
+			{ x: 20, y: data[1].koko_kentta},
+			{ x: 30, y: data[2].koko_kentta},
+			{ x: 40, y: data[3].koko_kentta},
+			{ x: 50, y: data[4].koko_kentta },
+			{ x: 60, y: data[5].koko_kentta },
+			{ x: 70, y: data[6].koko_kentta },
+			{ x: 80, y: data[7].koko_kentta },
+			{ x: 90, y: data[8].koko_kentta},
+			{ x: 100, y: data[9].koko_kentta },
+			{ x: 110, y: data[10].koko_kentta },
+			{ x: 120, y: data[11].koko_kentta }
+		
+		]
+	},
+	{
+		type: "line",
+		axisYType: "secondary",
+		name: "X-Arvo",
+		showInLegend: true,
+		markerSize: 0,
+		yValueFormatString: "",
+		dataPoints: [
+			{ x: 10, y: data[0].x },
+			{ x: 20, y: data[1].x},
+			{ x: 30, y: data[2].x},
+			{ x: 40, y: data[3].x},
+			{ x: 50, y: data[4].x },
+			{ x: 60, y: data[5].x },
+			{ x: 70, y: data[6].x },
+			{ x: 80, y: data[7].x },
+			{ x: 90, y: data[8].x},
+			{ x: 100, y: data[9].x },
+			{ x: 110, y: data[10].x },
+			{ x: 120, y: data[11].x}
+	
+		]
+	},
+	{
+		type: "line",
+		axisYType: "secondary",
+		name: "Y-Arvo",
+		showInLegend: true,
+		markerSize: 0,
+		yValueFormatString: "",
+		dataPoints: [
+		{ x: 10, y: data[0].y },
+			{ x: 20, y: data[1].y},
+			{ x: 30, y: data[2].y},
+			{ x: 40, y: data[3].y},
+			{ x: 50, y: data[4].y },
+			{ x: 60, y: data[5].y },
+			{ x: 70, y: data[6].y },
+			{ x: 80, y: data[7].y },
+			{ x: 90, y: data[8].y},
+			{ x: 100, y: data[9].y },
+			{ x: 110, y: data[10].y },
+			{ x: 120, y: data[11].y}
+		]
+	},
+	{
+		type: "line",
+		axisYType: "secondary",
+		name: "Z-Arvo",
+		showInLegend: true,
+		markerSize: 0,
+		yValueFormatString: "",
+		dataPoints: [
+			{ x: 10, y: data[0].z },
+			{ x: 20, y: data[1].z},
+			{ x: 30, y: data[2].z},
+			{ x: 40, y: data[3].z},
+			{ x: 50, y: data[4].z},
+			{ x: 60, y: data[5].z },
+			{ x: 70, y: data[6].z },
+			{ x: 80, y: data[7].z },
+			{ x: 90, y: data[8].z},
+			{ x: 100, y: data[9].z },
+			{ x: 110, y: data[10].z },
+			{ x: 120, y: data[11].z}
+
+		]
+	}]
+});
+chart.render();
+
+function toogleDataSeries(e){
+	if (typeof(e.dataSeries.visible) === "undefined" || e.dataSeries.visible) {
+		e.dataSeries.visible = false;
+	} else{
+		e.dataSeries.visible = true;
+	}
+	chart.render();
+}
+}
+}
+xhttp.open ("GET","kaikkidata",true);
+xhttp.send();
+
+}
+</script>
+</head>
+<body>
+<div id="chartContainer" style="height: 370px; width: 100%;"></div>
+<script src="https://canvasjs.com/assets/script/jquery-1.11.1.min.js"></script>
+<script src="https://canvasjs.com/assets/script/jquery.canvasjs.min.js"></script>
+
+
+<div id="chartContainer" style="height: 370px; width: 100%;"></div>
+<script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
+
+</body>
+
+</html>
